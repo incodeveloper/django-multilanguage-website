@@ -100,7 +100,7 @@ Author URL: http://w3layouts.com
                         </div>
                         <div class="cont-right">
                             <h6>Call Me</h6>
-                            <p><a href="tel:+44 99 555 42">+123 45 67 89</a></p>
+                            <p><a href="tel:{{ content.phone }}">{{ content.phone }}</a></p>
                         </div>
                     </div>
                     <div class="cont-top margin-up">
@@ -109,7 +109,7 @@ Author URL: http://w3layouts.com
                         </div>
                         <div class="cont-right">
                             <h6>Email Me</h6>
-                            <p><a href="mailto:example@mail.com" class="mail">example@mail.com</a></p>
+                            <p><a href="mailto:{{ content.email }}" class="mail">{{ content.email }}</a></p>
                         </div>
                     </div>
                     <div class="cont-top margin-up">
@@ -118,7 +118,7 @@ Author URL: http://w3layouts.com
                         </div>
                         <div class="cont-right">
                             <h6>Location</h6>
-                            <p>Address here, 208 Trainer Avenue street, Illinois, UK - 62617.</p>
+                            <p>{{ content.location }}</p>
                         </div>
                     </div>
                 </div>

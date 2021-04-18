@@ -2,12 +2,24 @@
 from __future__ import unicode_literals
 
 from django.shortcuts import render
+from .models import *
 
 def site_index(request):
-    return render(request, 'index.html', {})
 
-def site_about(request):
-    return render(request, 'about.html', {})
+    header_section = HeaderSection.objects.first()
+    split_text = HeaderSplitText.objects.select_related('section').all()
+    resume = Resume.objects.first()
+    services = Service.objects.all()
+    testimonials = Testimonial.objects.all()
+    video = VideoSection.objects.first()
 
-def site_contact(request):
-    return render(request, 'contact.html', {})
+    context = {
+        'header_section': header_section,
+        'split_text': split_text,
+        'resume': resume,
+        'services': services,
+        'testimonials': testimonials,
+        'video': video
+    }
+
+    return render(request, 'index.html', context)

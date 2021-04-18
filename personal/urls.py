@@ -17,7 +17,9 @@ from django.contrib import admin
 from django.urls import path, include
 from django.conf import settings
 from django.conf.urls.static import static
-from page.views import *
+from page.views import site_index
+from about.views import site_about
+from contact.views import site_contact
 
 urlpatterns = [
     path('admin/', admin.site.urls),
